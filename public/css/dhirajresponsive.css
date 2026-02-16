@@ -1,0 +1,857 @@
+@media only screen and (max-device-width: 600px) {
+    .ib_content_bx {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 327px;
+        gap: 71px;
+    }
+
+    .inner_box {
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    .black_div {
+        border-radius: 0px;
+        background: var(--New-Black, #101014);
+        width: 100%;
+        max-width: 375px;
+        padding: 0px 24px;
+        margin: 0px 0px 0px;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 24px;
+    }
+
+    .ib_box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 327px;
+        height: 100%;
+        padding: 40px 0px;
+
+    }
+
+    .ib_upper_bx {
+        display: flex;
+        width: 327px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 22px;
+    }
+
+    .ib_upper_bx h4 {
+        font-size: 37px;
+    }
+
+    .ib_upper_bx p {
+        color: var(--Neutral-White, #FFF);
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 158%;
+        margin-bottom: 0px;
+    }
+
+    .ib_box2 {
+        display: flex;
+        width: 327px;
+        padding: 24px 16px;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 21px;
+        border-radius: 20px 20px 0px 0px;
+        background: var(--Neutral-White, #FFF);
+        border: none;
+    }
+
+
+    .captcha_tick {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 21px;
+    }
+
+    .forms_box {
+        display: flex;
+        width: 100%;
+        max-width: 465px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 21px;
+        margin: 0px auto 0px;
+    }
+
+    .odd {
+        color: var(--New-Primary-Green, #7CD85A);
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 158%;
+        margin-bottom: 0px;
+    }
+
+    .terms_line {
+        color: var(--Neutral-Near-Black, #0E0E0E);
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 158%;
+        margin-bottom: 0px;
+    }
+
+    .captcha_tick {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 21px;
+    }
+
+    /* SECURE CHECKOUT */
+
+    .sec_uper {
+        background-image: url(../image/bg_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 504px;
+        background-color: var(--Neutral-400, #F4F4F4);
+        padding-bottom: 0px;
+        padding-top: 317px;
+        margin: auto 24px;
+        border-radius: 0px;
+    }
+
+    .sec_cont {
+        display: flex;
+        width: 327px;
+        padding: 40px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .sec_cont h4 {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .sec_cont p {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .lowr_sec {
+        padding-top: 24px;
+        padding-bottom: 24px;
+    }
+
+    .bill_title {
+        border-bottom: dashed 1px #101014;
+        width: 100%;
+        max-width: 324px;
+    }
+
+    .billing_box {
+        display: flex;
+        padding: 24px 16px;
+        flex-direction: column;
+        align-items: center;
+        gap: 21px;
+        align-self: stretch;
+        border-radius: 20px;
+        background: var(--Neutral-White, #FFF);
+        border: none;
+    }
+
+    .feilds_box_sc {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 9px;
+        align-self: stretch;
+        width: 100%;
+        max-width: 332px;
+        margin: auto;
+    }
+
+    .table_box {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 9px;
+        max-width: 324px;
+    }
+
+    .top_tt h4 {
+        color: var(--New-Black, #101014);
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 121%;
+        text-transform: capitalize;
+        margin-bottom: 0px;
+    }
+
+
+    .top_tt2 {
+        display: flex;
+        justify-content: space-between;
+        gap: 24px;
+        align-items: flex-start;
+        align-self: stretch;
+    }
+
+    .top_tt2 p {
+        color: var(--New-Black, #101014);
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 158%;
+        margin-bottom: 0px;
+
+    }
+
+    .seo {
+        width: 100%;
+        max-width: 78px;
+    }
+
+    .totall_bx {
+        width: 100%;
+        max-width: 326px;
+        margin-left: auto;
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        gap: 24px;
+    }
+
+    .totall_bx h4 {
+        color: var(--New-Black, #101014);
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 0px;
+    }
+
+    .totall_bx h3 {
+        color: var(--New-Primary-Green, #7CD85A);
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+
+    .apply_cupon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 21px;
+        flex-direction: column;
+        align-self: stretch;
+    }
+
+    .btn_appk {
+        width: 100%;
+        max-width: 327px;
+    }
+
+    .captcha_bax {
+        display: flex;
+        width: 100%;
+        max-width: 774px;
+        justify-content: center;
+        align-items: center;
+        gap: 21px;
+        flex-direction: column-reverse;
+    }
+
+    .cupoon_box {
+        width: 100%;
+        height: 80px;
+        border-radius: 2px;
+        border: 3px solid var(--Neutral-500, #D0D0D0);
+        padding: 20px 16px;
+        gap: 9px;
+    }
+
+
+
+    /* ABOUT US */
+    .about_us {
+        background-image: url(../image/abou_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 701px;
+        padding-bottom: 0px;
+        margin: 0px;
+        border-radius: 0px 0px 50px 50px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .ab_title_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+        max-width: 279px;
+        margin-bottom: 77px;
+    }
+
+    .ab_title_box p {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 0px;
+    }
+
+    .ab_title_box h4 {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+    }
+
+    .commonn {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 158%;
+        margin-bottom: 0px;
+    }
+
+    .ff_top {
+        gap: 24px;
+    }
+
+    .facts_fig {
+        display: flex;
+        width: 100%;
+        max-width: 327px;
+        padding: 0px 0px 40px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        margin: auto;
+    }
+
+    .ff_top h4 {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+
+    }
+
+    .four_cards {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+    }
+
+    .card_1 {
+        background-image: url(../image/card_1_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 532px;
+        width: 100%;
+        max-width: 367px;
+        position: relative;
+
+    }
+
+    .card_2 {
+        background-image: url(../image/card_2_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 532px;
+        width: 100%;
+        max-width: 367px;
+        position: relative;
+    }
+
+    .card_3 {
+        background-image: url(../image/card_3_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 532px;
+        width: 100%;
+        max-width: 367px;
+        position: relative;
+
+    }
+
+    .card_4 {
+        background-image: url(../image/card_4_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 532px;
+        width: 100%;
+        max-width: 367px;
+        position: relative;
+
+    }
+
+    .card_inner_1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        max-width: 187px;
+        position: absolute;
+        bottom: 24px;
+        left: 69px;
+        top: 74%;
+    }
+
+    .email_section {
+        display: flex;
+        padding: 40px 24px 24px;
+        flex-direction: column;
+        height: 100%;
+        align-items: flex-start;
+        gap: 24px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        background: var(--Neutral-White, #FFF);
+    }
+
+    .emial-box {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 23px;
+    }
+
+
+
+    .emial-box h4 {
+        color: var(--Neutral-Near-Black, #0E0E0E);
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+    }
+
+    .emial-box p {
+        color: var(--Neutral-Near-Black, #0E0E0E);
+        font-family: "Clash Grotesk Variable";
+        font-size: 29px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+    }
+
+    .email_context {
+        color: var(--Neutral-Near-Black, #0E0E0E);
+        text-align: left;
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 158%;
+        margin-bottom: 0px;
+    }
+
+    .img_box {
+        display: flex;
+        padding: 40px 24px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 24px;
+        align-self: stretch;
+        border-radius: 20px 20px 0px 0px;
+        background: #1F1F1F;
+    }
+
+    .servi_tt {
+        gap: 24px;
+    }
+
+    .bo_wt {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+
+    }
+
+    .servi_tt p {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .serv_rw_1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 327px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 33px;
+    }
+
+    .serv_c1 {
+        background-image: url(../image/ser_1_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 327px;
+        position: relative;
+        border-radius: 32px;
+
+    }
+
+    .serv_c2 {
+        background-image: url(../image/ser_2_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        position: relative;
+        border-radius: 32px;
+        height: 327px;
+    }
+
+    .serv_c3 {
+        background-image: url(../image/ser_3_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 327px;
+        position: relative;
+        border-radius: 32px;
+
+    }
+
+    .serv_c4 {
+        background-image: url(../image/ser_4_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 327px;
+        position: relative;
+        border-radius: 32px;
+
+    }
+
+    .serv_c5 {
+        background-image: url(../image/ser_5_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 327px;
+        position: relative;
+        border-radius: 32px;
+
+    }
+
+    .card_btn {
+        display: flex;
+        width: 100%;
+        height: 51.124px;
+        padding: 24px 8px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        border-radius: 32px;
+        background: var(--Neutral-White, #FFF);
+        backdrop-filter: blur(4px);
+    }
+
+    .black_box {
+        display: flex;
+        width: 375px;
+        padding: 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        border-radius: 20px 20px 0px 0px;
+        background: var(--New-Black, #101014);
+        height: auto;
+    }
+
+    .black_inn {
+        display: flex;
+        padding: 40px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        flex-shrink: 0;
+    }
+
+    .box_r img {
+        width: auto;
+        max-width: auto;
+        height: 100%;
+        max-height: 297px;
+    }
+
+    .three_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+
+    .box_r h4 {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+    }
+
+    .box_r p {
+        color: #949494;
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        margin-bottom: 0px;
+
+    }
+
+    .gree_box {
+        display: flex;
+        width: 375px;
+        padding: 48px 24px;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        height: auto;
+        border-radius: 20px 20px 0px 0px;
+        background-image: url(../image/green_mob.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: var(--New-Primary-Green, #7CD85A);
+        position: static;
+    }
+
+    .left_g_text h4 {
+        color: var(--New-Black, #101014);
+        text-align: center;
+        font-family: "Clash Grotesk Variable";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 0px;
+
+    }
+
+    .inner_g {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1308px;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .left_g_text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        width: 100%;
+        max-width: 705px;
+        text-align: center;
+    }
+
+    .cart_black {
+        max-width: 100%;
+    }
+
+    .cart_black:hover {
+        max-width: 100%;
+    }
+
+
+
+
+
+
+
+
+
+
+
+}
+
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1348px) {
+
+    .inner_g {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1085px;
+    }
+
+    .serv_rw_1 {
+        display: flex;
+        width: 1169px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 33px;
+    }
+
+    .serv_img_bs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+        margin-top: 24px;
+    }
+
+    .facts_fig {
+        display: flex;
+        width: 100%;
+        padding: 64px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 79px;
+        margin: auto;
+    }
+
+
+}
+
+@media only screen and (min-device-width: 1349px) and (max-device-width: 1439px) {}
+
+@media only screen and (min-device-width: 1440px) and (max-device-width: 1499px) {
+
+    .inner_g {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1170px;
+    }
+
+    .serv_rw_1 {
+        display: flex;
+        width: 1300px;
+        justify-content: space-between;
+        align-items: center;
+        gap: 33px;
+    }
+
+    .serv_img_bs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        align-self: stretch;
+        margin-top: 24px;
+    }
+
+    .facts_fig {
+        display: flex;
+        width: 100%;
+        padding: 64px 0px;
+        flex-direction: column;
+        align-items: center;
+        gap: 79px;
+        margin: auto;
+    }
+
+}
+
+@media only screen and (min-device-width: 1500px) and (max-device-width: 1699px) {}
+
+@media only screen and (min-device-width: 1800px) and (max-device-width: 1919px) {}

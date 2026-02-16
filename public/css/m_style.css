@@ -1,0 +1,685 @@
+/*----------------------------- Global -----------------------------*/
+.desktop_none {
+    display: none;
+}
+
+.mobile_none {
+    display: block;
+}
+
+/* ----------------------- Checkbox ----------------------- */
+
+.c-checkbox input[type='checkbox']:checked~label:after, .c-checkbox input[type='checkbox']:checked~.label:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+.c-checkbox>.c-div>label:before, .c-checkbox>.c-div>.label:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    background: transparent;
+    border: 2px solid #FFFFFF;
+    box-sizing: border-box;
+    /* box-shadow: inset 0px 4px 4px rgb(0 0 0 / 5%); */
+    border-radius: 4px;
+    top: 10px;
+    left: 3px;
+}
+input[type=checkbox], input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+.c-checkbox input[type='checkbox'] {
+    display: none;
+}
+.c-checkbox input[type='checkbox']~label:after, .c-checkbox input[type='checkbox']~.label:after {
+    content: "✔";
+    display: block;
+    position: absolute;
+    color: #FFFFFF !important;
+    border-radius: 0;
+    border: 0;
+    font-family: 'Poppins';
+    font-size: 10px;
+    text-align: center;
+    line-height: 12px;
+    height: 1px;
+    width: 1px;
+    left: 7.5px;
+    top: 13px;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    transition: all .15s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.c-checkbox {
+    position: relative;
+    margin-bottom: 0px;
+}
+.login_strong {
+    color: #FFF;
+    font-family: "Clash Grotesk Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0px;
+}
+.login_strong a {
+    color: var(--New-Primary-Green, #7CD85A);
+    font-family: "Clash Grotesk Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 0px;
+    text-decoration: none;
+}
+.c-text {
+    margin-left: 41px;
+    margin-bottom: 15px;
+    max-width: 323px;
+}
+
+
+
+.ser_s1_pre_title {
+    color: var(--Neutral-White, #FFF);
+
+    /* Headings/New Heading 04 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+.ser_s1_title {
+    color: var(--Neutral-White, #FFF);
+
+    /* Headings/New Heading 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 72px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+.ser_s1_subtitle {
+    color: var(--Neutral-White, #FFF);
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    margin-bottom: 40px;
+}
+.btn_global_m {
+    display: flex;
+    min-width: 164px;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--New-Primary-Green, #7CD85A);
+    color: var(--New-Black, #101014);
+    text-align: center;
+    font-family: "Clash Grotesk Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+.ser_s1_content {
+    max-width: 778px;
+}
+.ser_s1_inner {
+    padding-top: 425px;
+    padding-bottom: 163px;
+    padding-left: 140px;
+    border-bottom-right-radius: 60px;
+    border-bottom-left-radius: 60px;
+}
+.ser_s1 {
+    background: #101014;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.ser_s2_pre_title {
+    color: var(--New-Light-Green, #F5FBF2);
+
+    /* Headings/New Heading 04 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 23px;
+}
+.ser_s2_title {
+    color: var(--Neutral-White, #FFF);
+
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.ser_s2_subtitle {
+    color: var(--Neutral-White, #FFF);
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    margin-bottom: 0px;
+    min-height: 165px;
+}
+.ser_s2_frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 138px;
+}
+.ser_s2 {
+    background: var(--New-Black, #101014);
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.ser_s2_left, .ser_s2_right {
+    padding: 10px;
+    width: 100%;
+    max-width: 647px;
+}
+.ser_s2_bar {
+    border-radius: 100px;
+    background: var(--New-Primary-Green, #7CD85A);
+    height: 11px;
+    width: 100%;
+    margin-bottom: 23px;
+}
+.ser_s5_pre_title {
+    color: var(--New-Light-Green, #F5FBF2);
+
+    /* Headings/New Heading 04 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 23px;
+}
+.ser_s5_title {
+    color: var(--Neutral-White, #FFF);
+
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+.ser_s5_subtitle {
+    color: var(--Neutral-White, #FFF);
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    margin-bottom: 35px;
+}
+.ser_s5_inner_content {
+    border-radius: 60px 20px 20px 20px;
+    background: #1F1F1F;
+    padding: 40px 23px 40px 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+    margin-bottom: 30px;
+    gap: 12px;
+}
+.ser_s5_inner_row {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+}
+.ser_s5_inner_content_subtitle {
+    color: var(--Neutral-White, #FFF);
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    margin-bottom: 0px;
+}
+.ser_s5 {
+    background: #101014;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.ser_s5_frame {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+.ser_s5_left {
+    width: 100%;
+    max-width: fit-content;
+}
+.ser_s5_right {
+    width: 100%;
+    max-width: 576px;
+}
+.for_pad {
+    padding: 10px;
+}
+.ser_s7_title {
+    color: var(--Neutral-White, #FFF);
+    text-align: center;
+
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.ser_s7_subtitle {
+    color: var(--Neutral-White, #FFF);
+    text-align: center;
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    margin-bottom: 56px;
+}
+.ser_s7 {
+    background: url(../image/ser_s7_bg.png);
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    padding-top: 99px;
+    padding-bottom: 140px;
+    border-top-left-radius: 98px;
+    border-top-right-radius: 98px;
+}
+.ser_s7_form_label {
+    color: var(--Neutral-White, #FFF);
+
+    /* Fields */
+    font-family: "Clash Grotesk Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 9.2px;
+}
+.input_global_m {
+    border-radius: 30px;
+    background: var(--Neutral-White, #FFF);
+    width: 100%;
+    height: 54px;
+}
+.textarea_global_m {
+    border-radius: 30px;
+    background: var(--Neutral-White, #FFF);
+    width: 100%;
+    height: 119.196px;
+}
+.ser_s7_content_form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 49px;
+}
+.blk {
+    background-color: #101014;
+}
+.ser_s7_form_elememt {
+    width: 100%;
+    max-width: 486px;
+}
+.ser_s7 .btn_global_m {
+    max-width: 506px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+.ser_s7_content_form {
+    margin-bottom: 30px;
+}
+.service_section {
+    padding: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+    .mobile_none {
+        display: none;
+    }
+    .desktop_none {
+        display: block;
+    }
+
+    .ser_s1 {
+        background: #101014;
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+    .ser_s1_inner {
+        padding-top: 463px;
+        padding-bottom: 33px;
+        padding-left: 24px;
+        padding-right: 24px;
+        border-bottom-right-radius: 30px;
+        border-bottom-left-radius: 30px;
+    }
+    .ser_s1_pre_title {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+
+        /* mobile/New Mobile H4 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 16px;
+    }
+    .ser_s1_title {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+
+        /* mobile/New Mobile H1 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .ser_s1_subtitle {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        margin-bottom: 25px;
+    }
+    .mo_mx_auto {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .ser_s2_frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 24px;
+    }
+    .ser_s2_left, .ser_s2_right {
+        padding: 0px 12px;
+        width: 100%;
+        max-width: unset;
+    }
+    .ser_s2 {
+        background: var(--New-Black, #101014);
+        padding-top: 40px;
+        padding-bottom: 40px;
+    }
+    .ser_s2_pre_title {
+        color: var(--Neutral-White, #FFF);
+
+        /* mobile/New Mobile H4 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 25px;
+    }
+    .ser_s2_title {
+        color: var(--Neutral-White, #FFF);
+
+        /* mobile/New Mobile H2 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .ser_s2_bar {
+        border-radius: 100px;
+        background: var(--New-Primary-Green, #7CD85A);
+        height: 11px;
+        width: 100%;
+        margin-bottom: 25px;
+    }
+    .ser_s2_subtitle {
+        color: var(--Neutral-White, #FFF);
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        margin-top: 0px;
+    }
+    .ser_s5_frame {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 47px;
+    }
+    .for_pad {
+        padding: 0px;
+    }
+    .ser_s5_pre_title {
+        color: var(--New-Light-Green, #F5FBF2);
+
+        /* Headings/New Heading 04 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 25px;
+    }
+    .ser_s5_title {
+        color: var(--Neutral-White, #FFF);
+
+        /* mobile/New Mobile H2 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+    }
+    .ser_s5_subtitle {
+        color: var(--Neutral-White, #FFF);
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        margin-bottom: 25px;
+    }
+    .ser_s5_inner_content {
+        border-radius: 0px;
+        background: transparent;
+        padding: 0px;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: fit-content;
+        margin-bottom: 25px;
+        gap: 11px;
+    }
+    .ser_s5_inner_content_subtitle {
+        color: var(--Neutral-White, #FFF);
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        margin-bottom: 0px;
+    }
+    .ser_s5_content .btn_global_m {
+        width: 100%;
+    }
+    .ser_s5 {
+        background: #101014;
+        padding-top: 40px;
+        padding-bottom: 61px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+    .ser_s7_title {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+
+        /* mobile/New Mobile H1 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 16px;
+    }
+    .ser_s7_subtitle {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        margin-bottom: 16px;
+    }
+    .ser_s7_content_form {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: unset;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 13px;
+    }
+    .ser_s7 {
+        background: url(../image/ser_s7_bg_mobo.png);
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        padding-top: 54px;
+        padding-bottom: 54px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+}
+
+@media only screen and (min-width: 780px) and (max-width:991px) {}
+
+@media only screen and (min-width: 992px) and (max-width: 1151px) {}
+
+@media only screen and (min-width: 1152px) and (max-width:1279px) {}
+
+@media only screen and (min-width: 1280px) and (max-width:1348px) {
+    .ser_s2_frame {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 69px;
+    }
+}
+
+@media only screen and (min-width: 1349px) and (max-width:1439px) {
+    .ser_s2_frame {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 69px;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (max-width:1499px) {}
+
+@media only screen and (min-width: 1500px) and (max-width:1599px) {}
+
+@media only screen and (min-width: 1600px) and (max-width:1699px) {}
+
+@media only screen and (min-width: 1700px) and (max-width:1799px) {}
+
+@media only screen and (min-width: 1800px) and (max-width:1919px) {}

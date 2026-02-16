@@ -1,0 +1,1147 @@
+.desktop_none {
+    display: none;
+}
+
+.mobile_none {
+    display: block;
+}
+
+.desktop-space::before {
+    content: "\00A0"; /* This is the Unicode for a non-breaking space */
+  }
+  
+  @media (max-width: 768px) {
+    .desktop-space::before {
+      content: ""; /* Remove the space on mobile */
+    }
+  }
+  
+
+
+
+.sec_padding {
+    padding-top: 117px;
+    padding-bottom: 0px;
+    
+}
+
+.custom_padding {
+    padding: 0px 37px;
+}
+
+
+.custom_padding2 {
+    padding: 0px 35px;
+}
+
+
+.extra_space {
+    padding: 100px;
+    background-color: aqua;
+}
+
+.signup_page {
+    background: var(--Neutral-400, #F4F4F4);
+    padding-top: 153px;
+    padding-bottom: 259px;
+}
+
+
+.main_signup {
+    padding: 24px;
+    border-radius: 60px;
+    background: var(--New-Black, #101014);
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+.for_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.left_signup {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 240px 79px;
+}
+
+.signup_tt {
+    color: var(--Neutral-White, #FFF);
+    text-align: center;
+
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    width: 503px;
+    height: 130px;
+    margin-bottom: 31px;
+}
+
+.green_btn {
+    display: flex;
+    width: 147px;
+    padding: 14px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 20px;
+    background: var(--New-Primary-Green, #7CD85A);
+    color: var(--New-Black, #101014);
+    text-align: center;
+
+    /* p/Btn */
+    font-family: "Clash Grotesk Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+}
+
+.green_btn:hover {
+    border-radius: 20px;
+    border: 1px solid var(--New-Primary-Green, #7CD85A);
+    color: var(--New-Primary-Green, #7CD85A);
+text-align: center;
+
+/* p/Btn */
+font-family: "Clash Grotesk Variable";
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+text-transform: capitalize;
+}
+.right_signup {
+    border-radius: 2px 60px 60px 2px;
+    border: 15px solid var(--New-Black, #101014);
+    background: var(--Neutral-White, #FFF);
+    display: flex;
+    align-items: center;
+}
+
+.sign_form {
+    padding: 26px 53px;
+}
+
+.login_form {
+    padding: 0px 36px;
+}
+
+
+
+.form_tt {
+    width: 474px;
+    height: 83px;
+    color: var(--New-Black, #101014);
+
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    margin-bottom: 26px;
+}
+
+.input_sectiont {
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    gap: 16px;
+    align-self: stretch;
+}
+
+.per_input {
+    display: flex;
+    /* height: 89px; */
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 10px;
+    align-self: stretch;
+    border-radius: 20px;
+}
+
+.input_tt {
+    color: var(--Neutral-Near-Black, #0E0E0E);
+
+    /* Fields */
+    font-family: "Clash Grotesk Variable";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    height: 19px;
+    margin-bottom: 0px;
+}
+
+
+.input_css {
+    padding: 16px;
+    width: 100%;
+    border-radius: 30px;
+    border: 1px solid var(--New-Black, #101014);
+    height: 60px;
+}
+
+
+/* tick check box start*/
+
+.c-checkbox input[type='checkbox']:checked~label:after,
+.c-checkbox input[type='checkbox']:checked~.label:after {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+}
+
+.c-checkbox>.c-div>label:before,
+.c-checkbox>.c-div>.label:before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    border: 1px solid var(--neutral-600, #9B9B9B);
+    background: var(--neutral-white, #FFF);
+    box-sizing: border-box;
+    border-radius: 0px;
+    top: 2px;
+    left: 4px;
+}
+
+input[type=checkbox],
+input[type=radio] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+.c-checkbox input[type='checkbox'] {
+    display: none;
+}
+
+.contact_para_mobo {
+    display: none;
+}
+
+.c-checkbox input[type='checkbox']~label:after,
+.c-checkbox input[type='checkbox']~.label:after {
+    content: url(../image/tick.svg);
+    display: block;
+    position: absolute;
+    color: #00173E !important;
+    border-radius: 0;
+    border: 0;
+    font-family: 'Poppins';
+    font-size: 30px;
+    text-align: center;
+    line-height: 12px;
+    width: 24px;
+    height: 24px;
+    left: 4px;
+    top: 2px;
+    transform-origin: 50% 50%;
+    -webkit-transform-origin: 50% 50%;
+    -ms-transform-origin: 50% 50%;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    -webkit-transition: all .15s ease;
+    -ms-transition: all .15s ease;
+    transition: all .15s ease;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.c-checkbox {
+    position: relative;
+    margin-bottom: 0px;
+}
+
+.c-text {
+    margin-left: 35px;
+}
+
+
+.login_strong {
+    color: var(--Neutral-Near-Black, #0E0E0E);
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%;
+    /* 26.86px */
+    margin-bottom: 0px;
+}
+
+.green_terms {
+    color: var(--New-Primary-Green, #7CD85A);
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%;
+    margin-bottom: 0px;
+}
+
+
+
+/* tick check box end*/
+
+.for_width_hundred_desktop {
+    width: 100%;
+}
+
+.modal_width {
+    max-width: 973px;
+}
+
+.remove_modal_css {
+    display: flex;
+    align-items: center;
+    background: transparent;
+    border: 0px;
+}
+
+
+.custom_modal {
+    display: flex;
+    width: 973px;
+    height: 321px;
+    padding: 24px 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 30px;
+    border: 5px solid var(--New-Primary-Green, #7CD85A);
+    background: var(--Neutral-White, #FFF);
+}
+
+.in_modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+}
+
+.modal_tt {
+    color: var(--New-Black, #101014);
+    text-align: center;
+
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.modal_pp {
+    color: var(--New-Black, #101014);
+    text-align: center;
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%;
+    /* 26.86px */
+    margin-bottom: 0px;
+}
+
+.login_page {
+    background: var(--Neutral-400, #F4F4F4);
+    padding-top: 243px;
+    padding-bottom: 275px;
+}
+
+
+.main_login {
+    padding-top: 20px;
+    padding-left: 23px;
+    padding-bottom: 21px;
+    padding-right: 22px;
+    border-radius: 60px;
+    background: #1F1F1F;
+    display: flex;
+    flex-direction: row;
+}
+
+
+.left_login {
+    /* width: 100%; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 190px 60px;
+    background-color: var(--New-Black, #101014);
+    border-radius: 60px 2px 2px 60px;
+}
+
+
+.ignore_div {
+    height: 10px;
+}
+
+
+.forget_password_tt {
+    border: 0px;
+    padding: 0px;
+    color: var(--New-Primary-Green, #7CD85A);
+    text-align: center;
+
+    /* p/New Button Link */
+    font-family: "Clash Grotesk Variable";
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-decoration-line: underline;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+    margin-top: 10px;
+}
+
+.custom_modal2 {
+    display: flex;
+    width: 899px;
+    height: 414px;
+    padding: 24px 36px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    border-radius: 30px;
+    border: 5px solid var(--New-Primary-Green, #7CD85A);
+    background: var(--Neutral-White, #FFF);
+}
+
+
+.in_modal2 {
+    display: flex;
+    /* width: 696px; */
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.in_second_modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    align-self: stretch;
+}
+
+.lastin_modal {
+    width: 451px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+
+}
+
+
+.background_socio {
+        background-color: var(--New-Black, #101014);;
+}
+
+
+.sec2_socio {   
+
+    display: flex;
+    /* width: 1920px; */
+    padding: 64px 0px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+
+    border-radius: 100px 100px 0px 0px;
+    background: var(--Neutral-400, #F4F4F4);
+}
+
+.title_tt {
+    color: var(--New-Black, #101014);
+    text-align: center;
+    
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.title_pp {
+    color: var(--New-Black, #101014);
+    text-align: center;
+    
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    width: 940px;
+height: 79px;
+margin-bottom: 0px;
+}
+
+.socio_crd_div {
+    display: flex;
+    align-items: center;
+    /* gap: 100px; */
+    justify-content: space-between;
+}
+
+.socio_crd {
+    display: flex;
+    width: 284px;
+    height: 457px;
+    flex-direction: column;
+    /* justify-content: flex-end; */
+    align-items: center;
+    border-radius: 30px;
+border: 10px solid var(--New-Black, #101014);
+background: var(--New-Black, #101014);
+}
+
+.crd_image {
+    border-radius: 20px 20px 0px 0px;
+}
+
+.crd_content {
+    display: flex;
+    padding: 24px 10px;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    border-radius: 0px 0px 30px 30px;
+}
+
+.crd_pp {
+    height: 91px;
+    color: #949494;
+    text-align: center;
+    
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    margin-bottom: 0px;
+}
+
+.crd_tt {
+    color: var(--Neutral-White, #FFF);
+    text-align: center;
+    
+    /* Headings/New Heading 04 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 0px;
+}
+
+.background_socio3 {
+        background-color: var(--Neutral-400, #F4F4F4);;
+}
+
+.socio_sec3 {
+    border-radius: 100px 100px 0px 0px;
+    background: #1F1F1F;
+    padding: 160px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.main_sec3_socio {
+    /* width: 1440px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 95px;
+
+}
+
+.first_div_sec3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 44px;
+    align-self: stretch;
+}
+
+.socio_sec3_pp {
+    /* width: 674px; */
+    color: var(--Neutral-White, #FFF);
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+    margin-bottom: 0px;
+}
+
+
+.left_socio_pp {
+    height: 37px;
+    color: var(--New-Light-Green, #F5FBF2);
+
+    /* Headings/New Heading 04 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.left_socio_tt {
+    width: 722px;
+    color: var(--Neutral-White, #FFF);
+
+    /* Headings/New Heading 02 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 53px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.53px;
+    text-transform: uppercase;
+    margin-bottom: 0px;
+}
+
+.second_div_sec3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+}
+
+
+.green_crd {
+    display: flex;
+    flex-direction: row;
+    width: 470px;
+    /* height: 198px; */
+    padding: 43px 26px;
+    
+    align-items: center;
+    gap: 33px;
+    border-radius: 60px;
+border: 1px dashed var(--New-Primary-Green, #7CD85A);
+}
+
+
+.green_crd_tt {
+    color: var(--Neutral-White, #FFF);
+
+    /* Headings/New Heading 04 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: capitalize;
+    margin-bottom: 14px;
+}
+
+.green_crd_pp {
+    
+    height: 63px;
+    margin-bottom: 0px;
+    color: #949494;
+
+    /* p/New P 01 */
+    font-family: "Clash Grotesk Variable";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 158%; /* 26.86px */
+}
+@media only screen and (max-width: 600px) {
+    .mobile_none {
+        display: none;
+    }
+
+    .desktop_none {
+        display: block;
+    }
+
+
+.sec_padding {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    
+}
+
+    .ignore_div {
+        height: 21px;
+    }
+
+    .for_width_hundred {
+        width: 100%;
+    }
+
+    .signup_page,
+    .sign_form,
+    .login_page,
+    .login_form {
+        padding: 0px;
+        width: 100%;
+    }
+
+    .main_signup,
+    .main_login {
+        border-radius: 0px;
+        padding: 0px;
+        flex-direction: column-reverse;
+    }
+
+    .right_signup {
+        border: 0px;
+        display: flex;
+        padding: 24px 16px;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px 20px 0px 0px;
+        background: var(--Neutral-White, #FFF);
+    }
+
+    .form_tt {
+        width: auto;
+        color: var(--New-Black, #101014);
+        text-align: center;
+
+        /* mobile/New Mobile H1 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        height: auto;
+        margin-bottom: 21px;
+    }
+
+    .input_sectiont {
+        align-items: flex-start;
+        gap: 26px;
+    }
+
+    .left_signup,
+    .left_login {
+        padding: 40px 24px;
+        border-radius: 0px;
+    }
+
+    .signup_tt {
+        height: auto;
+        width: auto;
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+
+        /* mobile/New Mobile H1 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 37px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-bottom: 31px;
+    }
+
+    .login_strong {
+        color: var(--Neutral-Near-Black, #0E0E0E);
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 142.857% */
+    }
+
+    .green_terms {
+        color: var(--New-Primary-Green, #7CD85A);
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+    }
+
+    .c-checkbox>.c-div>label:before,
+    .c-checkbox>.c-div>.label:before {
+        top: -1px;
+    }
+
+    .c-checkbox input[type='checkbox']~label:after,
+    .c-checkbox input[type='checkbox']~.label:after {
+        top: -1px;
+    }
+
+
+    .custom_modal {
+        display: flex;
+        width: 324px;
+        height: 278px;
+        padding: 24px 36px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        border-radius: 20px;
+        border: 5px solid var(--New-Primary-Green, #7CD85A);
+        background: var(--Neutral-White, #FFF);
+    }
+
+
+
+    .in_modal {
+        gap: 16px;
+    }
+
+    .modal_tt {
+        color: var(--Neutral-Near-Black, #0E0E0E);
+        text-align: center;
+
+        /* mobile/New Mobile H2 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+        margin-bottom: -8px;
+    }
+
+    .modal_pp {
+        color: var(--Neutral-Near-Black, #0E0E0E);
+        text-align: center;
+
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        /* 142.857% */
+    }
+
+    .forget_password_tt {
+        margin-top: -5px;
+        padding: 0px;
+        width: 100%;
+        color: var(--New-Primary-Green, #7CD85A);
+        text-align: center;
+
+        /* mobile/New Mobile H3 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+        margin-top: 0px;
+    }
+
+    .custom_margin {
+        margin-top: -18px;
+    }
+
+    .custom_modal2 {
+        display: flex;
+        width: 324px;
+        height: 371px;
+        padding: 24px 36px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+        border-radius: 20px;
+        border: 5px solid var(--New-Primary-Green, #7CD85A);
+        background: var(--Neutral-White, #FFF);
+    }
+
+    .lastin_modal {
+        width: auto;
+    }
+
+    .sec2_socio {
+        display: flex;
+        /* width: 375px; */
+        padding: 40px 24px;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        border-radius: 20px 20px 0px 0px;
+background: var(--Neutral-400, #F4F4F4);
+    }
+
+    .title_tt {
+        color: #0E2E35;
+        text-align: center;
+        
+        /* mobile/New Mobile H2 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        text-transform: uppercase;
+    }
+
+    .title_pp {
+        width: auto;
+        color: var(--Neutral-Near-Black, #0E0E0E);
+        text-align: center;
+        
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        display: flex;
+height: 127px;
+flex-direction: column;
+justify-content: center;
+align-self: stretch;
+    }
+
+    
+    .socio_sec3 {
+        border-radius: 0px;
+        padding: 40px 24px;
+        background-color: var(--New-Black, #101014);;
+    }
+
+    .socio_crd_div {
+            flex-direction: column;
+            gap: 24px;
+    }
+
+
+    .left_socio_pp {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        
+        /* mobile/New Mobile H4 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        height: 14px;
+        margin-bottom: 25px;
+    }
+    
+    .left_socio_tt {
+        width: auto;
+        color: var(--Neutral-White, #FFF);
+text-align: center;
+
+/* mobile/New Mobile H2 */
+font-family: "Clash Grotesk Variable";
+font-size: 30px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.9px;
+text-transform: uppercase;
+height: 122px;
+    }
+
+    .socio_sec3_pp {
+        color: var(--Neutral-White, #FFF);
+        text-align: center;
+        
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        align-self: stretch;
+    }
+
+    .first_div_sec3 {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .main_sec3_socio {
+        width: auto;
+        gap: 32px;
+    }
+
+
+    .second_div_sec3 {
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .green_crd {
+        display: flex;
+        width: auto;
+        height: 252px;
+        padding: 24px 26px;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        align-self: stretch;
+        border-radius: 20px;
+border: 1px dashed var(--New-Primary-Green, #7CD85A);
+    }
+
+    .green_crd_tt {
+        text-align: center;
+        color: var(--Neutral-White, #FFF);
+
+        /* Headings/New Heading 04 */
+        font-family: "Clash Grotesk Variable";
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        text-transform: capitalize;
+        margin-bottom: 14px;
+    }
+
+    .green_crd_pp {
+        color: #949494;
+        text-align: center;
+        
+        /* mobile/New Mobile Body */
+        font-family: "Clash Grotesk Variable";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        width: 214px;
+        height: auto;
+    }
+
+    .custom_padding,.custom_padding2 {
+        padding: 0px;
+    }
+}
+
+
+@media only screen and (min-width: 1200px) and (max-width:1348px) {
+    .left_signup {
+        padding: 240px 0px;
+    }
+
+    .left_login {
+        padding: 190px 0px;
+    }
+    .custom_padding {
+        padding: 0px;
+    }
+    .green_crd {
+        width: 361px;
+        height: 230px;
+    }
+}
+
+@media only screen and (min-width: 1349px) and (max-width:1439px) {
+    .left_signup {
+        padding: 240px 0px;
+    }
+
+    .left_login {
+        padding: 190px 0px;
+    }
+
+    .custom_padding {
+        padding: 0px;
+    }
+
+    .green_crd {
+        width: 361px;
+        height: 230px;
+    }
+}
+
+@media only screen and (min-width: 1440px) and (max-width:1499px) {
+
+    .green_crd {
+        width: 405px;
+}
+}
+
+@media only screen and (min-width: 1500px) and (max-width:1599px) {
+
+    .green_crd {
+        width: 424px;
+}
+}
+
+@media only screen and (min-width: 1600px) and (max-width:1699px) {
+
+    .green_crd {
+        width: 436px;
+}
+}
+
+@media only screen and (min-width: 1700px) and (max-width:1799px) {
+    .green_crd {
+            width: 436px;
+    }
+}
+
+@media only screen and (min-width: 1800px) and (max-width:1919px) {}
