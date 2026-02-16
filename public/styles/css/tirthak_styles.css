@@ -244,7 +244,7 @@ input[type=radio] {
 
 .c-checkbox input[type='checkbox']~label:after,
 .c-checkbox input[type='checkbox']~.label:after {
-    content: url(../image/tick.svg);
+    content: url(/assets/images/tick.svg);
     display: block;
     position: absolute;
     color: #00173E !important;

@@ -13,7 +13,7 @@
         padding: 12px 24px 12px;
     }
     .navbar-toggler-icon{
-        background: url(../image/menu-hamburger.svg) no-repeat;
+        background: url(/assets/images/menu-hamburger.svg) no-repeat;
         background-size: cover;
         background-position: center center;
     }
@@ -66,7 +66,7 @@
     }   
     .document-drop::after {
         content: "";
-        background: url(../image/Polygon-icon.svg) no-repeat;
+        background: url(/assets/images/Polygon-icon.svg) no-repeat;
         background-size: cover;
         background-position: center center;
         position: absolute;
@@ -78,7 +78,7 @@
     } 
     .cuur-drop::after {
         content: "";
-        background: url(../image/Polygon-icon.svg) no-repeat;
+        background: url(/assets/images/Polygon-icon.svg) no-repeat;
         background-size: cover;
         background-position: center center;
         position: absolute;
@@ -97,7 +97,7 @@
     }
     .dropdown-toggle::after {
         content: '';
-        background: url(../image/Expand_down.svg) no-repeat;
+        background: url(/assets/images/Expand_down.svg) no-repeat;
         background-size: cover;
         background-position: center center;
         position: absolute;
@@ -484,7 +484,7 @@
         flex-direction: column;
     }
     .bg-green-footer-top {
-        background: url(../image/New-Anchor-Mobile.png) no-repeat;
+        background: url(/assets/images/New-Anchor-Mobile.png) no-repeat;
         background-size: cover;
         background-position: center center;
         height: 371px;

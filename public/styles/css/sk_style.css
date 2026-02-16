@@ -25,7 +25,7 @@
 }
 
 .s1_db {
-    background: url(../image/bk_of_dashboard.png);
+    background: url(/assets/images/bk_of_dashboard.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -346,7 +346,7 @@
 }
 
 .s1_pf {
-    background: url(../image/bk_pf.png);
+    background: url(/assets/images/bk_pf.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center top;
@@ -523,7 +523,7 @@
     }
 
     .s1_db {
-        background: url(../image/bk_db_ph.png);
+        background: url(/assets/images/bk_db_ph.png);
         border-radius: 0px 0px 20px 20px;
         margin-left: 0px;
         margin-right: 0px;
@@ -744,7 +744,7 @@
     }
 
     .s1_pf {
-        background: url(../image/pf_bk_ph.png);
+        background: url(/assets/images/pf_bk_ph.png);
         border-radius: 0px 0px 20px 20px;
         margin-left: 24px;
         margin-right: 24px;
@@ -920,7 +920,7 @@
     }
 
     .s1_pf {
-        background: url(../image/bk_pf.png);
+        background: url(/assets/images/bk_pf.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;
@@ -993,7 +993,7 @@
     }
 
     .s1_pf {
-        background: url(../image/bk_pf.png);
+        background: url(/assets/images/bk_pf.png);
         background-repeat: no-repeat;
         background-size: cover;
         background-position: center top;

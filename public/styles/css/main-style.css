@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
+/* 
 @font-face {
   font-family: 'ClashGrotesk-Extralight';
   src: url('../fonts/ClashGrotesk-Extralight.woff2') format('woff2'),
@@ -54,7 +54,7 @@
   font-display: swap;
   font-style: normal;
 }
-
+ */
 
 
 body {
@@ -250,7 +250,7 @@ body{
 }
 .document-drop::after {
   content: "";
-  background: url(../image/Polygon-icon.svg) no-repeat;
+  background: url(/assets/images/Polygon-icon.svg) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -262,7 +262,7 @@ body{
 
 .cuur-drop::after {
   content: "";
-  background: url(../image/Polygon-icon.svg) no-repeat;
+  background: url(/assets/images/Polygon-icon.svg) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -282,7 +282,7 @@ body{
 }
 .shopping-cart::after {
   content: "";
-  background: url(../image/Polygon-icon.svg) no-repeat;
+  background: url(/assets/images/Polygon-icon.svg) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -346,7 +346,7 @@ body{
 }
 .dropdown-toggle::after {
   content: '';
-  background: url(../image/Expand_down.svg) no-repeat;
+  background: url(/assets/images/Expand_down.svg) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -359,7 +359,7 @@ body{
 }
 .dropdown-toggle.show::after {
   content: '';
-  background: url(../image/Expand_downc.svg) no-repeat;
+  background: url(/assets/images/Expand_downc.svg) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -454,7 +454,7 @@ body{
 }
 .shopping-cart-total::after{
   content: "";
-  background: url(../image/Line32.png) no-repeat;
+  background: url(/assets/images/Line32.png) no-repeat;
   background-size: cover;
   background-position: center center;
   position: absolute;
@@ -1017,7 +1017,7 @@ body{
   width: 100%;
 }
 .bg-green-footer-top {
-  background: url(../image/back-green.png) no-repeat;
+  background: url(/assets/images/back-green.png) no-repeat;
   background-size: cover;
   background-position: center center;
   height: 209px;
@@ -1144,7 +1144,7 @@ body{
     text-align: center;
   }
   .bg-green-footer-top {
-    background: url(../image/New-Anchor-Mobile.png) no-repeat;
+    background: url(/assets/images/New-Anchor-Mobile.png) no-repeat;
     background-size: cover;
     background-position: center center;
     height: 278px;

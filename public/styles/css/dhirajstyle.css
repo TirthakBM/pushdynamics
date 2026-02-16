@@ -242,7 +242,7 @@
 }
 
 .sec_uper {
-    background-image: url(../image/bg_sec.png);
+    background-image: url(/assets/images/bg_sec.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -549,7 +549,7 @@
 /* ABOUT US */
 
 .about_us {
-    background-image: url(../image/abou_bg.png);
+    background-image: url(/assets/images/abou_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -655,7 +655,7 @@
 }
 
 .card_1 {
-    background-image: url(../image/card_1.png);
+    background-image: url(/assets/images/card_1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -668,7 +668,7 @@
 }
 
 .card_2 {
-    background-image: url(../image/card_2.png);
+    background-image: url(/assets/images/card_2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -680,7 +680,7 @@
 }
 
 .card_3 {
-    background-image: url(../image/card_3.png);
+    background-image: url(/assets/images/card_3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -693,7 +693,7 @@
 }
 
 .card_4 {
-    background-image: url(../image/card_4.png);
+    background-image: url(/assets/images/card_4.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -873,7 +873,7 @@
 }
 
 .serv_c1 {
-    background-image: url(../image/ser_1.png);
+    background-image: url(/assets/images/ser_1.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -886,7 +886,7 @@
 }
 
 .serv_c2 {
-    background-image: url(../image/ser_2.png);
+    background-image: url(/assets/images/ser_2.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -899,7 +899,7 @@
 }
 
 .serv_c3 {
-    background-image: url(../image/ser_3.png);
+    background-image: url(/assets/images/ser_3.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -912,7 +912,7 @@
 }
 
 .serv_c4 {
-    background-image: url(../image/ser_4.png);
+    background-image: url(/assets/images/ser_4.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -925,7 +925,7 @@
 }
 
 .serv_c5 {
-    background-image: url(../image/ser_5.png);
+    background-image: url(/assets/images/ser_5.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1160,7 +1160,7 @@
     max-width: 1469px;
     height: 209px;
     border-radius: 60px;
-    background-image: url(../image/green_bg.png);
+    background-image: url(/assets/images/green_bg.png);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

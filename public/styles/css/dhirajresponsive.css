@@ -121,7 +121,7 @@
     /* SECURE CHECKOUT */
 
     .sec_uper {
-        background-image: url(../image/bg_mob.png);
+        background-image: url(/assets/images/bg_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -311,7 +311,7 @@
 
     /* ABOUT US */
     .about_us {
-        background-image: url(../image/abou_mob.png);
+        background-image: url(/assets/images/abou_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -406,7 +406,7 @@
     }
 
     .card_1 {
-        background-image: url(../image/card_1_mob.png);
+        background-image: url(/assets/images/card_1_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -418,7 +418,7 @@
     }
 
     .card_2 {
-        background-image: url(../image/card_2_mob.png);
+        background-image: url(/assets/images/card_2_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -429,7 +429,7 @@
     }
 
     .card_3 {
-        background-image: url(../image/card_3_mob.png);
+        background-image: url(/assets/images/card_3_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -441,7 +441,7 @@
     }
 
     .card_4 {
-        background-image: url(../image/card_4_mob.png);
+        background-image: url(/assets/images/card_4_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -569,7 +569,7 @@
     }
 
     .serv_c1 {
-        background-image: url(../image/ser_1_mob.png);
+        background-image: url(/assets/images/ser_1_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -581,7 +581,7 @@
     }
 
     .serv_c2 {
-        background-image: url(../image/ser_2_mob.png);
+        background-image: url(/assets/images/ser_2_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -592,7 +592,7 @@
     }
 
     .serv_c3 {
-        background-image: url(../image/ser_3_mob.png);
+        background-image: url(/assets/images/ser_3_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -604,7 +604,7 @@
     }
 
     .serv_c4 {
-        background-image: url(../image/ser_4_mob.png);
+        background-image: url(/assets/images/ser_4_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -616,7 +616,7 @@
     }
 
     .serv_c5 {
-        background-image: url(../image/ser_5_mob.png);
+        background-image: url(/assets/images/ser_5_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -708,7 +708,7 @@
         gap: 10px;
         height: auto;
         border-radius: 20px 20px 0px 0px;
-        background-image: url(../image/green_mob.png);
+        background-image: url(/assets/images/green_mob.png);
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;

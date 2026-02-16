@@ -341,7 +341,7 @@ input[type=checkbox], input[type=radio] {
     margin-bottom: 56px;
 }
 .ser_s7 {
-    background: url(../image/ser_s7_bg.png);
+    background: url(/assets/images/ser_s7_bg.png);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -635,7 +635,7 @@ input[type=checkbox], input[type=radio] {
         gap: 13px;
     }
     .ser_s7 {
-        background: url(../image/ser_s7_bg_mobo.png);
+        background: url(/assets/images/ser_s7_bg_mobo.png);
         background-size: cover;
         background-position: center top;
         background-repeat: no-repeat;
