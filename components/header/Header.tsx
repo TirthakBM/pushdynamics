@@ -4,6 +4,8 @@ import logo from "@assets/images/logo.svg";
 import logoMo from "@assets/images/logo-mo.svg";
 import X from "@assets/images/X.svg";
 
+import abou_mob from "@assets/images/abou_mob.png"
+
 export default function Header() {
   return (
     <header className="header-top  fixed-top" id="header-top">
@@ -57,7 +59,7 @@ export default function Header() {
                 <Link className="nav-link" href="#">FAQs</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="#">Login</Link>
+                <Link className="nav-link" href="/login">Login</Link>
               </li>
               <li className="nav-item">
                 <Link className="nav-link" href="#">Sign up</Link>
