@@ -1,4 +1,5 @@
 import BaseFileClient from "@components/BaseFileClient";
+import Footer from "@components/footer/Footer";
 import Header from "@components/header/Header";
 import type { Metadata } from "next";
 
@@ -14,6 +15,7 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
         <BaseFileClient />
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
