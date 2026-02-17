@@ -16,8 +16,8 @@ import Script from "next/script";
 export default function BaseFileClient() {
   return (
     <>
-      <Script src="/dist/js/popper.min.js" strategy="afterInteractive" />
       <Script src="/dist/js/bootstrap.min.js" strategy="afterInteractive" />
+      <Script src="/dist/js/popper.min.js" strategy="afterInteractive" />
     </>
   );
 }

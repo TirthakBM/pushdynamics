@@ -1,14 +1,30 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@assets/images/logo.svg";
 import logoMo from "@assets/images/logo-mo.svg";
 import X from "@assets/images/X.svg";
-
-import abou_mob from "@assets/images/abou_mob.png"
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 export default function Header() {
+  const pathName = usePathname();
+  const [pageScrolled, setPageScrolled] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      let scrollPos = window.scrollY;
+      if (scrollPos > 50) {
+        setPageScrolled(true);
+      } else {
+        setPageScrolled(false);
+      }
+    });
+  }, [])
+  
+  
   return (
-    <header className="header-top  fixed-top" id="header-top">
+    <header className="header-top fixed-top" style={pageScrolled ? {background: 'rgb(16, 16, 20)'} : {background: 'transparent'}} id="header-top">
       <nav className="navbar navbar-expand-lg">
         <div className="container p-mo">
           <div className="nav-logo-btn">
@@ -27,7 +43,7 @@ export default function Header() {
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav ms-auto">
               <li className="nav-item">
-                <Link className="nav-link" href="#">About Us</Link>
+                <Link className={pathName === '/about' ? 'nav-link active' : 'nav-link'} href="/about">About Us</Link>
               </li>
               <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -56,13 +72,13 @@ export default function Header() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="#">FAQs</Link>
+                <Link className={pathName === '/faq' ? 'nav-link active' : 'nav-link'} href="/faq">FAQs</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="/login">Login</Link>
+                <Link className={pathName === '/login' ? 'nav-link active' : 'nav-link'} href="/login">Login</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" href="#">Sign up</Link>
+                <Link className={pathName === '/signup' ? 'nav-link active' : 'nav-link'} href="/signup">Sign up</Link>
               </li>
               <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle drop-currency" href="#" id="navbarDropdown" role="button"
