@@ -24,6 +24,8 @@
       "@styles/*": ["./public/styles/*"],
       "@libs/*": ["./public/dist/*"],
       "@utils/*": ["./utils/*"],
+      "@src/*": ["./src/*"],
+      "@lib/*": ["./src/lib/*"],
       "@/*": ["./*"]
     }
     

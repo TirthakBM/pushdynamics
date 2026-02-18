@@ -1,6 +1,7 @@
 import BaseFileClient from "@components/BaseFileClient";
 import Footer from "@components/footer/Footer";
 import Header from "@components/header/Header";
+import { AuthProvider } from "@src/context/AuthContext";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -13,9 +14,11 @@ export default function RootLayout({children}: Readonly<{children: React.ReactNo
     <html lang="en">
       <body>
         <BaseFileClient />
-        <Header />
-        {children}
-        <Footer />
+        <AuthProvider>
+          <Header />
+          {children}
+          <Footer />
+        </AuthProvider>
       </body>
     </html>
   );

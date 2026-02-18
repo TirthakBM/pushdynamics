@@ -1,16 +1,33 @@
-import React from 'react'
-import Link from "next/link";
+"use client"
+
 import Input from '@components/Input';
 import GreenButton from '@components/GreenButton';
+import { useState } from 'react';
+import { useAuth } from '@src/context/AuthContext';
+import { useRouter } from 'next/navigation';
+
 
 export default function Login() {
+    const { login } = useAuth();
+    const router = useRouter();
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        await login(email, password);
+        
+    }
+
+
     return (
         <div className="login_page">
             <div className="container p-0 for_container">
                 <div className="main_login">
                     <div className="left_login">
-                        <h1 className="signup_tt mobile_none">DON’t have an account?</h1>
-                        <h1 className="signup_tt desktop_none">DON’t have an account?</h1>
+                        <h1 className="signup_tt mobile_none">DON't have an account?</h1>
+                        <h1 className="signup_tt desktop_none">DON't have an account?</h1>
                         {/* <button className="btn green_btn">Sign Up</button> */}
                         {/* <Link className="btn green_btn" href="/signup">Sign Up</Link> */}
                         <GreenButton href="/signup">Sign Up</GreenButton>
@@ -28,6 +45,8 @@ export default function Login() {
                                     <Input
                                         type="text"
                                         placeholder=""
+                                        value={email}
+                                        onChange={(e) => setEmail(e.target.value)}
                                     />
 
                                 </div>
@@ -38,6 +57,8 @@ export default function Login() {
                                     <Input
                                         type="password"
                                         placeholder=""
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                     />
                                 </div>
 
@@ -59,7 +80,7 @@ export default function Login() {
                                 </div>
 
                                 {/* <button className="btn green_btn for_width_hundred_desktop for_width_hundred" >Sign in</button> */}
-                                <GreenButton href="/signup" className="for_width_hundred_desktop for_width_hundred">Sign Up</GreenButton>
+                                <GreenButton onClick={handleSubmit} className="for_width_hundred_desktop for_width_hundred">Sign Up</GreenButton>
 
 
                                 <p className=" btn forget_password_tt" data-bs-toggle="modal" data-bs-target="#exampleModal">Forgot Password?</p>
