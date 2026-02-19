@@ -6,8 +6,11 @@ import logoMo from "@assets/images/logo-mo.svg";
 import X from "@assets/images/X.svg";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useAuth } from "@src/context/AuthContext";
 
 export default function Header() {
+
+  const { logout } = useAuth();
   const pathName = usePathname();
   const [pageScrolled, setPageScrolled] = useState(false);
 
@@ -98,7 +101,7 @@ export default function Header() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link cart-btn" href="#">View Cart</Link>
+                <Link onClick={async (e)=>{e.preventDefault(); await logout()}} className="nav-link cart-btn" href="#">View Cart</Link>
               </li>
             </ul>
           </div>
