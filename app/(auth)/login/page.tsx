@@ -3,7 +3,7 @@
 import Input from '@components/Input';
 import GreenButton from '@components/GreenButton';
 import { useState } from 'react';
-import { useAuth } from '@src/context/AuthContext';
+import { useAuth } from '@context/AuthContext';
 import { useRouter } from 'next/navigation';
 
 
@@ -17,7 +17,6 @@ export default function Login() {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         await login(email, password);
-        
     }
 
 

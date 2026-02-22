@@ -1,28 +1,54 @@
-import { NextResponse } from "next/server";
-import type { NextRequest } from "next/server";
+// import { NextResponse } from "next/server";
+// import type { NextRequest } from "next/server";
 
-export function middleware(req: NextRequest) {
-  const accessToken = req.cookies.get("accessToken")?.value;
+// export function middleware(req: NextRequest) {
+//   const accessToken = req.cookies.get("accessToken")?.value;
 
-  const isAuthRoute =
-    req.nextUrl.pathname.startsWith("/login") ||
-    req.nextUrl.pathname.startsWith("/signup");
+//   const isAuthRoute =
+//     req.nextUrl.pathname.startsWith("/login") ||
+//     req.nextUrl.pathname.startsWith("/signup");
 
-  const isProtectedRoute = req.nextUrl.pathname.startsWith("/dashboard");
+//   const isProtectedRoute = req.nextUrl.pathname.startsWith("/dashboard");
 
-  // If logged in user tries to access login/signup → redirect dashboard
-  if (isAuthRoute && accessToken) {
-    return NextResponse.redirect(new URL("/dashboard/home", req.url));
+//   // If logged in user tries to access login/signup → redirect dashboard
+//   if (isAuthRoute && accessToken) {
+//     return NextResponse.redirect(new URL("/dashboard/home", req.url));
+//   }
+
+//   // If not logged in and tries dashboard → redirect login
+//   if (isProtectedRoute && !accessToken) {
+//     return NextResponse.redirect(new URL("/login", req.url));
+//   }
+
+//   return NextResponse.next();
+// }
+
+// export const config = {
+//   matcher: ["/dashboard/:path*", "/login", "/signup"],
+// };
+
+
+
+import { NextResponse } from 'next/server';
+import type { NextRequest } from 'next/server';
+
+export function middleware(request: NextRequest) {
+  const refreshToken = request.cookies.get('refreshToken'); // Defined in cookies.js
+  const { pathname } = request.nextUrl;
+
+  // Protect dashboard routes
+  if (!refreshToken && pathname.startsWith('/dashboard')) {
+    return NextResponse.redirect(new URL('/login', request.url));
   }
 
-  // If not logged in and tries dashboard → redirect login
-  if (isProtectedRoute && !accessToken) {
-    return NextResponse.redirect(new URL("/login", req.url));
+  // Prevent logged-in users from seeing login/register
+  if (refreshToken && (pathname === '/login' || pathname === '/signup')) {
+    return NextResponse.redirect(new URL('/dashboard', request.url));
   }
 
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*", "/login", "/signup"],
+  matcher: ['/dashboard/:path*', '/login', '/signup'],
 };
