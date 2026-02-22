@@ -10,7 +10,7 @@ import { useAuth } from "@context/AuthContext";
 
 export default function Header() {
 
-  const { logout } = useAuth();
+  const { user, logout } = useAuth();
   const pathName = usePathname();
   const [pageScrolled, setPageScrolled] = useState(false);
 
@@ -77,12 +77,21 @@ export default function Header() {
               <li className="nav-item">
                 <Link className={pathName === '/faq' ? 'nav-link active' : 'nav-link'} href="/faq">FAQs</Link>
               </li>
-              <li className="nav-item">
-                <Link className={pathName === '/login' ? 'nav-link active' : 'nav-link'} href="/login">Login</Link>
-              </li>
-              <li className="nav-item">
-                <Link className={pathName === '/signup' ? 'nav-link active' : 'nav-link'} href="/signup">Sign up</Link>
-              </li>
+              {!user ? (
+                <>
+                  <li className="nav-item">
+                    <Link className={pathName === '/login' ? 'nav-link active' : 'nav-link'} href="/login">Login</Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link className={pathName === '/signup' ? 'nav-link active' : 'nav-link'} href="/signup">Sign up</Link>
+                  </li>
+                </>
+              ) : (
+                <li className="nav-item">
+                    <Link className={pathName === '/dashboard/home' ? 'nav-link active' : 'nav-link'} href="/dashboard/home">Dashboard</Link>
+                </li>
+              )}
+              
               <li className="nav-item dropdown">
                 <Link className="nav-link dropdown-toggle drop-currency" href="#" id="navbarDropdown" role="button"
                   data-bs-toggle="dropdown" aria-expanded="false">
