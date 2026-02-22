@@ -1,11 +1,34 @@
-import React from 'react'
-import Image from "next/image";
-import reCAPTCHA from '@assets/images/reCAPTCHA.png'
-import Link from 'next/link';
+"use client"
 import Input from '@components/Input';
 import GreenButton from '@components/GreenButton';
+import { useState } from "react";
+import { useAuth } from '@context/AuthContext';
 
 export default function Signup() {
+    const { register } = useAuth();
+
+    const [data, setData] = useState({
+        userName: '',
+        email: '',
+        password: '',
+        confirmPassword: ''
+    })
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        if (!data.userName || !data.email || !data.password || !data.confirmPassword) {
+            alert("please fill the form")
+        }
+        
+        if (data.password === data.confirmPassword) {
+            await register(data.userName, data.email, data.password, data.confirmPassword)
+        } else {
+            alert("password and confirm password must be same")
+        }
+        
+
+    }
+
     return (
         <div className="signup_page">
             <div className="container p-0 for_container">
@@ -29,6 +52,8 @@ export default function Signup() {
                                     <Input
                                         type="text"
                                         placeholder=""
+                                        value={data.userName}
+                                        onChange={(e) => setData({...data, userName: e.target.value})}
                                     />
 
                                 </div>
@@ -39,6 +64,8 @@ export default function Signup() {
                                     <Input
                                         type="text"
                                         placeholder=""
+                                        value={data.email}
+                                        onChange={(e) => setData({...data, email: e.target.value})}
                                     />
                                 </div>
 
@@ -48,12 +75,26 @@ export default function Signup() {
                                     <Input
                                         type="password"
                                         placeholder=""
+                                        value={data.password}
+                                        onChange={(e) => setData({...data, password: e.target.value})}
+                                    />
+
+                                </div>
+
+                                <div className="per_input">
+                                    <p className="input_tt">Password (at least 8 characters)</p>
+                                    {/* <input type="password" placeholder="" className="input_css" /> */}
+                                    <Input
+                                        type="password"
+                                        placeholder=""
+                                        value={data.confirmPassword}
+                                        onChange={(e) => setData({...data, confirmPassword: e.target.value})}
                                     />
 
                                 </div>
 
                                 {/* <img src="./image/reCAPTCHA.png" style="height: 76px;" alt="" className="img-fluid"> */}
-                                <Image src={reCAPTCHA} alt="" className="img-fluid" style={{ height: 76 }} />
+                                {/* <Image src={reCAPTCHA} alt="" className="img-fluid" style={{ height: 76 }} /> */}
 
                                 <div className="c-checkbox">
                                     <div className="c-div">
@@ -74,7 +115,7 @@ export default function Signup() {
                                 </div>
 
                                 {/* <button className="btn green_btn for_width_hundred_desktop for_width_hundred" data-bs-toggle="modal" data-bs-target="#exampleModal22">Create An Account</button> */}
-                                <GreenButton  className="for_width_hundred_desktop for_width_hundred" data-bs-toggle="modal" data-bs-target="#exampleModal22">Create An Account</GreenButton>
+                                <GreenButton onClick={handleSubmit} className="for_width_hundred_desktop for_width_hundred" data-bs-toggle="modal" data-bs-target="#exampleModal22">Create An Account</GreenButton>
 
                             </div>
 
