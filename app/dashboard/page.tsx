@@ -1,6 +1,13 @@
+"use client";
+
+
 import React from 'react'
 
 export default function Dashboard() {
+    const my_account_db = (name: string): void => {
+        console.log(name)
+      }
+      
     return (
         <section className="s1_db_section">
             <div className="s1_db">
@@ -15,7 +22,7 @@ export default function Dashboard() {
                     <div className="div_for_btn1 ">
                         {/* <!--<img className="img-fluid img_form mobile_none " src="./image/bw_ac_db.svg" alt="">--> */}
                             <button className="btn btn_form active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-                                type="button" role="tab" aria-controls="nav-home" aria-selected="true" onclick="my_account_db('My Account')">
+                                type="button" role="tab" aria-controls="nav-home" aria-selected="true"  onClick={() => my_account_db("My Account")}>
                                 <svg className="mobile_none" xmlns="http://www.w3.org/2000/svg" width="56" height="57" viewBox="0 0 56 57"
                                     fill="none">
                                     <path
@@ -29,7 +36,7 @@ export default function Dashboard() {
                         {/* <!--<img src="./image/order_db.svg" alt="" className="img-fluid img_form2 mobile_none">--> */}
                             <button className="btn btn_form" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile"
                                 type="button" role="tab" aria-controls="nav-profile" aria-selected="false"
-                                onclick="my_account_db('Order History')">
+                                onClick={() => my_account_db("Order History")}>
                                 <svg className="mobile_none" xmlns="http://www.w3.org/2000/svg" width="60" height="60" viewBox="0 0 60 60"
                                     fill="none">
                                     <path
@@ -47,7 +54,8 @@ export default function Dashboard() {
                             <button className="btn btn_form">
                                 <svg className="mobile_none" xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61"
                                     fill="none">
-                                    <g clip-path="url(#clip0_3607_13286)">
+                                    <g clipPath="url(#clip0_3607_13286)">
+
                                         <path
                                             d="M37.5 33C36.1175 33 35 34.12 35 35.5V45.5C35 46.8775 33.88 48 32.5 48H25V10.5C25 8.365 23.64 6.4575 21.595 5.7475L20.855 5.5H32.5C33.88 5.5 35 6.6225 35 8V15.5C35 16.88 36.1175 18 37.5 18C38.8825 18 40 16.88 40 15.5V8C40 3.865 36.635 0.5 32.5 0.5H5.625C5.53 0.5 5.45 0.5425 5.3575 0.555C5.2375 0.545 5.1225 0.5 5 0.5C2.2425 0.5 0 2.7425 0 5.5V50.5C0 52.635 1.36 54.5425 3.405 55.2525L18.45 60.2675C18.96 60.425 19.4675 60.5 20 60.5C22.7575 60.5 25 58.2575 25 55.5V53H32.5C36.635 53 40 49.635 40 45.5V35.5C40 34.12 38.8825 33 37.5 33Z"
                                             fill="#D0D0D0" />
