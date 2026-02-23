@@ -4,31 +4,79 @@
 import { useAuth } from '@context/AuthContext';
 import React, { useEffect, useState } from 'react'
 
+interface DashboardState {
+  message: string;
+  userObject: {
+    id: number;
+    user_type: string;
+    name: string;
+    lname: string;
+    email: string;
+    address: string | null;
+    addressL2: string;
+    country: string | null;
+    city: string | null;
+    postal_code: string | null;
+    stateProvince: string;
+    dob: string;
+    phone: string | null;
+  };
+}
+
 export default function Dashboard() {
-  const [name, setName] = useState("");
-
-  const {dashboardDetails, user,dashDetails} = useAuth();
-  // console.log(dashDetails,'1234');
+  const { dashboardDetails } = useAuth();
+  const [data, setData] = useState<DashboardState>({
+    message: "",
+    userObject: {
+      id: 0,
+      user_type: "",
+      name: "",
+      lname: "",
+      email: "",
+      address: null,
+      addressL2: "",
+      country: null,
+      city: null,
+      postal_code: null,
+      stateProvince: "",
+      dob: "",
+      phone: null,
+    },
+  });
   
-  const my_account_db = (name: string): void => {
-    console.log(name)
-  }
-
-
 
   useEffect(() => {
-    const dash = async() => {
+    const fetchDashboard = async () => {
       try {
-       await dashboardDetails("a@b.com")
-       
+        const res = await dashboardDetails("a@b.com"); 
+        if (res) {
+          setData(res);
+        }
       } catch (error) {
-        console.log('====================================');
         console.log(error);
-        console.log('====================================');
       }
-    }
-    dash()
-  }, [])
+    };
+
+    fetchDashboard();
+  }, []);
+
+
+  const handleChange = (
+    field: keyof DashboardState["userObject"],
+    value: string
+  ) => {
+    setData((prev) => ({
+      ...prev,
+      userObject: {
+        ...prev.userObject,
+        [field]: value,
+      },
+    }));
+  };
+
+
+
+ 
 
 
   return (
@@ -108,7 +156,7 @@ export default function Dashboard() {
                     </div>
                     <div className="div_for_input_db">
                       <p className="para_of_input_db">First Name</p>
-                      <input type="text" className="input_db" value={dashDetails?.userObject.name} onChange={(e) => setName(e.target.value)}/>
+                      <input type="text" className="input_db" />
                     </div>
                     <div className="div_for_input_db">
                       <p className="para_of_input_db">Last Name</p>
