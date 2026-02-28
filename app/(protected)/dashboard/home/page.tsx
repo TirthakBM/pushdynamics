@@ -1,4 +1,5 @@
-"use client"
+"use client";
+
 
 import GreenButton from "@components/GreenButton";
 import Input from "@components/Input";

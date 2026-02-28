@@ -15,6 +15,8 @@ interface AuthContextType {
   login: (email: string, password: string) => Promise<void>;
   register: (userName: string, email: string, password: string, confirmPassword: string) => Promise<void>;
   logout: () => Promise<void>;
+  dashDetails: DashboardResponse|null;
+  dashboardDetails: (email: string) => Promise<void>;
 }
 interface User {
   id: number;
@@ -38,10 +40,31 @@ interface RefreshResponse {
   success: boolean;
 }
 
+interface DashboardResponse {
+  message: string;
+  userObject: {
+    id: number;
+    user_type: string;
+    name: string;
+    lname: string;
+    email: string;
+    address: string | null;
+    addressL2: string;
+    country: string | null;
+    city: string | null;
+    postal_code: string | null;
+    stateProvince: string;
+    dob: string; // ISO date string
+    phone: string | null;
+  }
+}
+
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
 
 export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const [user, setUser] = useState<User | null>(null);
+  const [dashDetails, setDashDetails] = useState<DashboardResponse | null>(null);
+
   const [loading, setLoading] = useState<boolean>(true);
   const router = useRouter();
 
@@ -75,7 +98,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
       password,
       confirmPassword
     }); // Hits exports.loginUser
-    
+
     setUser(res.data.user);
     router.push('/dashboard');
   };
@@ -86,8 +109,21 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     router.push('/login');
   };
 
+  const dashboardDetails = async (email: string): Promise<void> => {
+    try {
+      const res = await api.get<DashboardResponse>(
+        '/auth/get-user-details',
+        { params: { email } }
+      );
+
+      setDashDetails(res.data);
+    } catch (error) {
+      console.error('Dashboard fetch error:', error);
+    }
+  };
+
   return (
-    <AuthContext.Provider value={{ user, loading, login, register, logout }}>
+    <AuthContext.Provider value={{ user, loading, login, register, logout,dashDetails,dashboardDetails }}>
       {children}
     </AuthContext.Provider>
   );
