@@ -195,7 +195,7 @@
 
 .db_1_inner {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 98px;
 }
 
@@ -915,7 +915,7 @@
 
     .db_1_inner {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 12px;
     }
 
@@ -988,7 +988,7 @@
 
     .db_1_inner {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 24px;
     }
 
@@ -1061,7 +1061,7 @@
 
     .db_1_inner {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 49px;
     }
 
@@ -1092,7 +1092,7 @@
 
     .db_1_inner {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         gap: 49px;
     }
 

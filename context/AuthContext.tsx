@@ -20,6 +20,7 @@ interface User {
   id: number;
   name: string;
   email: string;
+  emailVerified?: boolean;
   user_type?: string;
   address?: string;
   addressL2?: string;

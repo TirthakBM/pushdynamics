@@ -18,6 +18,7 @@ export default function BaseFileClient() {
     <>
       <Script src="/dist/js/bootstrap.min.js" strategy="afterInteractive" />
       <Script src="/dist/js/popper.min.js" strategy="afterInteractive" />
+      <Script src="/dist/js/bootstrap.bundle.min.js" strategy="afterInteractive" />
     </>
   );
 }

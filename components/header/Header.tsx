@@ -110,7 +110,7 @@ export default function Header() {
                 </ul>
               </li>
               <li className="nav-item">
-                <Link onClick={async (e)=>{e.preventDefault(); await logout()}} className="nav-link cart-btn" href="#">View Cart</Link>
+                <Link className="nav-link cart-btn" href="#">View Cart</Link>
               </li>
             </ul>
           </div>

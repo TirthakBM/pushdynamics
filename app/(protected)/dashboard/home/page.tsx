@@ -1,22 +1,100 @@
 "use client"
 
+import GreenButton from "@components/GreenButton";
+import Input from "@components/Input";
 import { useAuth } from "@context/AuthContext"
+import api from "@lib/axios";
+import { useEffect, useState } from "react";
 
 export default function Home() {
-  const { user } = useAuth();
+  const { user, loading, logout } = useAuth();
 
-  console.log(user);
+  const [userData, setUserData] = useState<any>({
+    id: '',
+    name: '',
+    email: '',
+    address: '',
+    addressL2: '',
+    country: '',
+    city: '',
+    postal_code: '',
+    password: '',
+    confirmPassword: '',
+  });
+  const [heading, setHeading] = useState("My Account");
 
-  const my_account_db = (value:string) => {
-    console.log(value);
+  const my_account_db = (value: string) => {
+    setHeading(value);
+  };
+
+  const fetchUserData = async (userEmail:string) => {
+    if (!user?.email) return;
+
+    try {
+        const res = await api.get("/auth/get-user-details", {
+            params: { email: userEmail },
+        });
+
+        setUserData({
+            id: res.data.userObject.id,
+            name: res.data.userObject.name,
+            email: res.data.userObject.email,
+            address: res.data.userObject.address,
+            addressL2: res.data.userObject.addressL2,
+            country: res.data.userObject.country,
+            city: res.data.userObject.city,
+            postal_code: res.data.userObject.postal_code,
+        })
+        
+    } catch (error) {
+        console.log("Error fetching user data:", error);
+    }
   }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    console.log(userData);
+    try {
+
+        const res = await api.post("/auth/update-user-details", {
+            name: userData.name,
+            email: userData.email,
+            address1: userData.address,
+            address2: userData.addressL2,
+            city: userData.city,
+            country: userData.country,
+            zipCode: userData.postal_code,
+            newPassword: userData.password,
+            cnfNewPass: userData.confirmPassword
+        });
+
+        console.log(res);
+        
+        
+    } catch (error) {
+        console.log("Error fetching user data:", error);
+    }
+  }
+
+  useEffect(() => {
+    if (!loading && user?.email) {
+        fetchUserData(user?.email);
+    }
+  }, [loading, user]);
   
+ 
+  if (loading) {
+    return <><h1 style={{color: "#FFFF"}}>loading....</h1></>
+  }
 
   return (
-    <section className="s1_db_section">
+    (!user?.emailVerified) ? (
+        <><h1 style={{color: "#FFFF"}}>Email is not verified</h1></>
+     ) : (
+        <section className="s1_db_section">
             <div className="s1_db">
                 <div className="s1_db_inner">
-                    <h1 className="heading_s1" id="heding_myac">My account</h1>
+                    <h1 className="heading_s1" id="heding_myac">{heading}</h1>
                     <p className="para_s1">From your account dashboard you can vier your recent orders, manage your billing addressed and
                         edit your password and account details.</p>
                 </div>
@@ -55,7 +133,7 @@ export default function Home() {
                     </div>
                     <div className="div_for_btn3">
                         {/* <!--<img src="./image/sign_out_db.png" alt="" className="img-fluid img_form mobile_none">--> */}
-                            <button className="btn btn_form">
+                            <button className="btn btn_form" onClick={async (e)=>{e.preventDefault(); await logout()}}>
                                 <svg className="mobile_none" xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61"
                                     fill="none">
                                     <g clipPath="url(#clip0_3607_13286)">
@@ -87,24 +165,20 @@ export default function Home() {
                                             <h3 className="heading_tp">Personal Details</h3>
                                         </div>
                                         <div className="div_for_input_db">
-                                            <p className="para_of_input_db">First Name</p>
-                                            <input type="text" className="input_db" />
-                                        </div>
-                                        <div className="div_for_input_db">
-                                            <p className="para_of_input_db">Last Name</p>
-                                            <input type="text" className="input_db" />
-                                        </div>
-                                        <div className="div_for_input_db">
-                                            <p className="para_of_input_db">Phone</p>
-                                            <input type="text" className="input_db" />
+                                            <p className="para_of_input_db">Name</p>
+                                            <Input type="text" placeholder="Name" className="input_db" value={userData.name || ""} onChange={(e) => setUserData({...userData, name: e.target.value})} />
                                         </div>
                                         <div className="div_for_input_db">
                                             <p className="para_of_input_db">Email</p>
-                                            <input type="text" className="input_db" />
+                                            <Input type="text" placeholder="Email" className="input_db" value={userData.email || ""} onChange={(e) => setUserData({...userData, email: e.target.value})} />
                                         </div>
                                         <div className="div_for_input_db">
-                                            <p className="para_of_input_db">password</p>
-                                            <input type="text" className="input_db" />
+                                            <p className="para_of_input_db">New Password</p>
+                                            <Input type="text" placeholder="Password" className="input_db" onChange={(e) => setUserData({...userData, password: e.target.value})} />
+                                        </div>
+                                        <div className="div_for_input_db">
+                                            <p className="para_of_input_db">Confirm Password</p>
+                                            <Input type="text" placeholder="Confirm Password" className="input_db" onChange={(e) => setUserData({...userData, confirmPassword: e.target.value})} />
                                         </div>
                                     </div>
                                     <div className="inside_div">
@@ -112,28 +186,28 @@ export default function Home() {
                                             <h3 className="heading_tp">Address</h3>
                                         </div>
                                         <div className="div_for_input_db">
-                                            <p className="para_of_input_db">Postcode / Zip</p>
-                                            <input type="text" className="input_db" />
+                                            <p className="para_of_input_db">Address Line 1</p>
+                                            <Input type="text" placeholder="Address Line 1" className="input_db" value={userData.address || ""} onChange={(e) => setUserData({...userData, address: e.target.value})} />
                                         </div>
                                         <div className="div_for_input_db">
                                             <p className="para_of_input_db">Address Line 2</p>
-                                            <input type="text" className="input_db" />
+                                            <Input type="text" placeholder="Address Line 2" className="input_db" value={userData.addressL2 || ""} onChange={(e) => setUserData({...userData, addressL2: e.target.value})} />
                                         </div>
                                         <div className="div_for_input_db">
                                             <p className="para_of_input_db">City</p>
-                                            <input type="text" className="input_db" />
+                                            <Input type="text" placeholder="City" className="input_db" value={userData.city || ""} onChange={(e) => setUserData({...userData, city: e.target.value})} />
                                         </div>
                                         <div className="div_for_input_db">
                                             <p className="para_of_input_db">Country</p>
-                                            <input type="text" className="input_db" />
+                                            <Input type="text" placeholder="Country" className="input_db" value={userData.country || ""} onChange={(e) => setUserData({...userData, country: e.target.value})} />
                                         </div>
                                         <div className="div_for_input_db">
                                             <p className="para_of_input_db">Postcode / Zip</p>
-                                            <input type="text" className="input_db" />
+                                            <Input type="text" placeholder="Postcode / Zip" className="input_db" value={userData.postal_code || ""} onChange={(e) => setUserData({...userData, postal_code: e.target.value})} />
                                         </div>
                                     </div>
                                 </div>
-                                <button className="btn btn_for_save_db">Save Changes</button>
+                                <GreenButton onClick={handleSubmit} className="btn btn_for_save_db w-100 m-0">Save Changes</GreenButton>
                             </div></div>
                     </div>
                     <div className="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabIndex={0}>
@@ -226,5 +300,7 @@ export default function Home() {
                 </div>
             </div>
         </section>
+    )
+    
   )
 }
